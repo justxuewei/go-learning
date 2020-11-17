@@ -21,6 +21,10 @@ type Dog struct {
 	Pet
 }
 
+func (d *Dog) Speak() {
+	fmt.Print("Wang!")
+}
+
 func TestDog(t *testing.T) {
 	dog := new(Dog)
 	dog.SpeakTo("Chao")
