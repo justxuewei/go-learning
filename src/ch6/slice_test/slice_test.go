@@ -1,6 +1,9 @@
 package slice_test
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestSliceInit(t *testing.T) {
 	// slice don't have a length compared with array
@@ -46,4 +49,14 @@ func TestSliceCompare(t *testing.T) {
 	// if a == b {
 	// 	t.Log("equal")
 	// }
+}
+
+func sliceAddress(s []int) {
+	fmt.Printf("%p %T\n", s, s)
+}
+
+func TestSliceAddress(t *testing.T) {
+	s := []int{1}
+	fmt.Printf("%p %T\n", s, s)
+	sliceAddress(s)
 }

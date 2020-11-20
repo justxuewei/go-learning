@@ -1,6 +1,9 @@
 package map_test
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestInitMap(t *testing.T) {
 	m1 := map[int]int{1: 1, 2: 4, 3: 9}
@@ -37,4 +40,16 @@ func TestTravelMap(t *testing.T) {
 	for k, v := range m1 {
 		t.Log(k, v)
 	}
+}
+
+func mapAddress(m map[int]int) {
+	fmt.Printf("%p %T\n", &m, m)
+	m[1] = 2
+}
+
+func TestMapAddress(t *testing.T) {
+	m1 := map[int]int{1: 1, 2: 4, 3: 9}
+	fmt.Printf("%p %T\n", &m1, m1)
+	mapAddress(m1)
+	fmt.Println(m1)
 }
