@@ -1,4 +1,4 @@
-package ch6_method
+package ch06_method
 
 type Point struct { X, Y float64 }
 

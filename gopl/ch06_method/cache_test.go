@@ -1,4 +1,4 @@
-package ch6_method
+package ch06_method
 
 import "testing"
 

@@ -1,4 +1,4 @@
-package ch7_interface
+package ch07_interface
 
 import (
 	"fmt"
